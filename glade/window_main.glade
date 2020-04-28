@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkFileFilter" id="filefilter_iso">
+    <patterns>
+      <pattern>*.iso</pattern>
+      <pattern>*.ISO</pattern>
+    </patterns>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Smelter - USB image writer</property>
+    <property name="resizable">False</property>
+    <property name="default_width">510</property>
+    <property name="default_height">120</property>
+    <property name="hide_titlebar_when_maximized">True</property>
+    <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <signal name="show" handler="on_show_window_main" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="container">
+        <property name="name">container</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="btn_write">
+            <property name="label">gtk-media-record</property>
+            <property name="width_request">100</property>
+            <property name="height_request">92</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_stock">True</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_clicked_btn_write" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">400</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFileChooserButton" id="btn_file_open">
+            <property name="width_request">380</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Select a ISO</property>
+            <property name="filter">filefilter_iso</property>
+            <property name="title" translatable="yes">Select a ISO</property>
+            <signal name="selection-changed" handler="on_change_btn_file_open" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText" id="btn_select_drive">
+            <property name="width_request">380</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Select a drive</property>
+            <signal name="changed" handler="on_change_btn_select_drive" swapped="no"/>
+            <signal name="focus" handler="on_focus_btn_select_drive" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
