@@ -13,7 +13,6 @@ Smelter is a basic GTK3 usb image writer created in C.
     $ make
 
 
-
 ## Usage 
 
     $ sudo build/smelter
