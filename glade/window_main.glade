@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkFileFilter" id="filefilter_iso">
@@ -11,11 +11,9 @@
   <object class="GtkWindow" id="window_main">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Smelter - USB image writer</property>
     <property name="resizable">False</property>
     <property name="default_width">510</property>
     <property name="default_height">120</property>
-    <property name="hide_titlebar_when_maximized">True</property>
     <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
     <signal name="show" handler="on_show_window_main" swapped="no"/>
     <child type="titlebar">

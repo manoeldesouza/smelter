@@ -3,3 +3,4 @@ build/*
 test/*
 src/*.glade~
 glade/*.glade~
+.buildconfig

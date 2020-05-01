@@ -95,11 +95,11 @@ void get_drive_letter(char* drive_letter, char* drive_name) {
 }
 
 void cmd_run(char* cmd) {
-  sleep(2);
+  //sleep(2);
   printf("cmd: %s\n", cmd);
-  //int result = system(cmd);
-  //printf("return: %d\n", result);
-  sleep(8);
+  int result = system(cmd);
+  printf("return: %d\n", result);
+  //sleep(8);
   printf("complete\n");
 }
 
